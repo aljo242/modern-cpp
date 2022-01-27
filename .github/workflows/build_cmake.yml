@@ -28,15 +28,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ['ubuntu-latest', 'windows-latest', 'macos-latest']
+        os: ['ubuntu-latest', 'windows-latest']
         include:
         - os: ubuntu-latest
           ENABLE_COVERAGE: ON
         - os: windows-latest
           # Windows works differently
           ENABLE_COVERAGE: OFF
-        - os: macos-latest
-          ENABLE_COVERAGE: ON
 
 
     steps:
