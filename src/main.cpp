@@ -1,9 +1,9 @@
-#include <functional>
 #include <iostream>
 
 #include <spdlog/spdlog.h>
 
 #include "concepts.h"
+#include "lambdas.h"
 
 int main()
 {
@@ -12,8 +12,10 @@ int main()
 
   fmt::print("Hello, from {}\n", "{fmt}");
   
-  std::vector ints {1, 2, 3, 4, 5, 6, 7, 8};
-  fmt::print("Average is {}\n", Average(ints));
+  const auto average = RunAverage();
+  fmt::print("Average is {}\n", average);
+
+  DoLambdaStuff();
 
   return 0;
 }

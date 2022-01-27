@@ -13,4 +13,7 @@ constexpr double Average(std::vector<T> const &vec) {
   return sum / double(vec.size());
 }
 
+
+double RunAverage();
+
 #endif // _CONCEPTS_H
