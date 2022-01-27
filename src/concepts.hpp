@@ -5,9 +5,10 @@
 #include <concepts>
 #include <vector>
 
-template <typename T>
+template<typename T>
 requires std::integral<T> || std::floating_point<T>
-constexpr double Average(std::vector<T> const &vec) {
+constexpr double Average(std::vector<T> const &vec)
+{
   // accumulate starting with init value of 0
   const double sum = std::accumulate(vec.begin(), vec.end(), 0.0);
   return sum / double(vec.size());
@@ -16,4 +17,4 @@ constexpr double Average(std::vector<T> const &vec) {
 
 double RunAverage();
 
-#endif // _CONCEPTS_H
+#endif// _CONCEPTS_H

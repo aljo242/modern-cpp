@@ -3,9 +3,9 @@
 
 // [capture clause] (parameters) -> return type
 // {
-//      definition   
+//      definition
 // }
 
 void DoLambdaStuff();
 
-#endif // _LAMBDAS_H
+#endif// _LAMBDAS_H
