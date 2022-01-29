@@ -62,6 +62,9 @@ jobs:
           echo "Ubuntu - Fix Conan Path"
           sudo update-alternatives --install /usr/bin/conan conan /home/runner/.local/bin/conan 10
           sudo update-alternatives --config conan
+          sudo apt install clang-12 --install-suggests
+          export CC=clang
+          export CXX=clang++
         elif [ "$RUNNER_OS" == "Windows" ]; then
           echo "Using chocolatey to install OpenCppCoverage"
           choco install opencppcoverage
