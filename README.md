@@ -1,9 +1,9 @@
 # cpp_starter_project
 
-[![Build status](https://ci.appveyor.com/api/projects/status/d1tbhi2frii45rcl/branch/main?svg=true)](https://ci.appveyor.com/project/cpp-best-practices/cpp-starter-project/branch/main)
-![CMake](https://github.com/cpp-best-practices/cpp_starter_project/workflows/CMake/badge.svg)
-[![codecov](https://codecov.io/gh/cpp-best-practices/cpp_starter_project/branch/main/graph/badge.svg)](https://codecov.io/gh/cpp-best-practices/cpp_starter_project)
-[![Language grade: C++](https://img.shields.io/lgtm/grade/cpp/github/cpp-best-practices/cpp_starter_project)](https://lgtm.com/projects/g/cpp-best-practices/cpp_starter_project/context:cpp)
+<!-- [![Build status](https://ci.appveyor.com/api/projects/status/d1tbhi2frii45rcl/branch/main?svg=true)](https://ci.appveyor.com/project/cpp-best-practices/cpp-starter-project/branch/main)-->
+![CMake](https://github.com/aljo242/modern-cpp/workflows/CMake/badge.svg)
+<!--  [![codecov](https://codecov.io/gh/cpp-best-practices/cpp_starter_project/branch/main/graph/badge.svg)](https://codecov.io/gh/cpp-best-practices/cpp_starter_project) -->
+[![Language grade: C++](https://img.shields.io/lgtm/grade/cpp/github.com/aljo242/modern-cpp)](https://lgtm.com/projects/g/aljo242/modern-cpp/context:cpp)
 
 ## Getting Started
 
