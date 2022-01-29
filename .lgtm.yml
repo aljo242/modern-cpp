@@ -21,4 +21,4 @@ extraction:
         - mkdir build
         - cmake -D ENABLE_COVERAGE:BOOL=TRUE -S . -B build
     index:
-      build_command: cmake --build ./build -- -j2
+      build_command: CC=clang CXX=clang++ cmake --build ./build -- -j2
