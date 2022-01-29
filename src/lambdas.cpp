@@ -2,11 +2,27 @@
 #include <fmt/core.h>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 // [capture clause] (parameters) -> return type
 // {
 //      definition
 // }
+
+class Widget
+{
+private:
+    int w = 0;
+
+public:
+    Widget(const int _w)
+      : w(_w)
+    {}
+
+    int weight() const {
+        return w;
+    }
+};
 
 void DoLambdaStuff()
 {
@@ -47,4 +63,23 @@ void DoLambdaStuff()
   auto sum = [](auto a, auto b) { return a + b; };
   const auto lamRes = sum(1, 2);
   fmt::print("sum  is {}\n", lamRes);
+
+
+  // cpp algorithms 
+  auto comp = [](const Widget &w1, const Widget &w2) {
+      return w1.weight() < w2.weight();
+  };
+
+  auto v = std::vector{ Widget(1), Widget(2), Widget(4), Widget(3) };
+  for (const auto &w : v) {
+      fmt::print("Weight : {}, ", w.weight());
+  }
+
+  std::sort(v.begin(), v.end(), comp);
+  fmt::print("\nSORTED\n");
+  for (const auto &w : v) {
+      fmt::print("Weight : {}, ", w.weight());
+  }
+  fmt::print("\n");
+
 }

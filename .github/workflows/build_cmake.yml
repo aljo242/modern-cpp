@@ -28,13 +28,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ['ubuntu-latest', 'windows-latest']
+        os: ['ubuntu-latest']
         include:
         - os: ubuntu-latest
           ENABLE_COVERAGE: ON
-        - os: windows-latest
-          # Windows works differently
-          ENABLE_COVERAGE: OFF
+       # - os: windows-latest
+       #   # Windows works differently
+       #   ENABLE_COVERAGE: OFF
 
 
     steps:
@@ -71,7 +71,7 @@ jobs:
 
     - name: Configure CMake
       run: |
-          cmake -S . -B ./build -DCMAKE_BUILD_TYPE:STRING=$BUILD_TYPE
+          CC=clang CXX=clang++ cmake -S . -B ./build -DCMAKE_BUILD_TYPE:STRING=$BUILD_TYPE
 
     - name: Build
       # Execute the build.  You can specify a specific target with "--target <NAME>"
