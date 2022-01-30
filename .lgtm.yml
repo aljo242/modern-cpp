@@ -7,6 +7,7 @@ extraction:
   cpp:
     prepare:
       packages:
+        - clang-12
         - clang++-12
         - ccache
       script:
@@ -19,6 +20,6 @@ extraction:
     configure:
       command:
         - mkdir build
-        - CC=clang12 CXX=clang++12 cmake -D ENABLE_COVERAGE:BOOL=TRUE -S . -B build
+        - CC=clang-12 CXX=clang++-12 cmake -D ENABLE_COVERAGE:BOOL=TRUE -S . -B build
     index:
-      build_command: CC=clang12 CXX=clang++12 cmake --build ./build -- -j2
+      build_command: CC=clang-12 CXX=clang++-12 cmake --build ./build -- -j2
