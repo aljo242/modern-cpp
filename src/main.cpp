@@ -7,15 +7,15 @@
 
 int main()
 {
-  // Use the default logger (stdout, multi-threaded, colored)
-  spdlog::info("Hello, {}!", "World");
+    // Use the default logger (stdout, multi-threaded, colored)
+    spdlog::info("Hello, {}!", "World");
 
-  fmt::print("Hello, from {}\n", "{fmt}");
+    fmt::print("Hello, from {}\n", "{fmt}");
 
-  const auto average = RunAverage();
-  fmt::print("Average is {}\n", average);
+    const auto average = RunAverage();
+    fmt::print("Average is {}\n", average);
 
-  DoLambdaStuff();
+    DoLambdaStuff();
 
-  return 0;
+    return 0;
 }
